@@ -17,6 +17,9 @@ public class UpadtedGmail {
 	public	WebDriver driver;
 	//************* This method will help you to mark as unread to read****************************** 
   
+	String username="bharath@tradesocio.com";  
+	String PWD="407bharath";
+	
 
 	@BeforeClass
 	public void makeitread() throws Exception {
@@ -33,14 +36,14 @@ public class UpadtedGmail {
     	
     	driver.navigate().to("https://gmail.com");
     	
-    	driver.findElement(By.xpath(".//*[@id='identifierId']")).sendKeys("bharathkumar0732");
+    	driver.findElement(By.xpath(".//*[@id='identifierId']")).sendKeys(username);
     	
     	driver.findElement(By.xpath(".//*[@id='identifierNext']/content/span")).click();
     	
     
     	Thread.sleep(2000);
     	
-    	driver.findElement(By.name("password")).sendKeys("bharath0732");
+    	driver.findElement(By.name("password")).sendKeys(PWD);
     	
     	
     	driver.findElement(By.xpath(".//*[@id='passwordNext']/content")).click();
